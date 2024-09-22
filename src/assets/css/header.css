@@ -1,0 +1,102 @@
+#header {
+  margin-top: 40px;
+  height: 56px;
+}
+#header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main_menu {
+  position: relative;
+  width: 100%;
+}
+
+.menu_wrapper {
+  background-color: #F6F6F6;
+  border-radius: 8px;
+  padding: 0 30px;
+  width: 100%;
+}
+.menu_wrapper ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+.menu_wrapper ul li {
+  padding: 16px 0;
+}
+.menu_wrapper ul li:hover {
+  border-bottom: 2px solid #2E8C2C;
+  margin-bottom: -2px;
+}
+.menu_wrapper ul li:hover a {
+  color: #767976;
+}
+
+.header_rightside {
+  display: flex;
+  justify-items: start;
+  align-items: center;
+}
+
+.has-submenu .submenu {
+  display: flex;
+  position: absolute;
+  top: 105%;
+  left: 0;
+  width: 100%;
+  background-color: #F6F6F6;
+  border-radius: 8px;
+  padding: 8px 20px 16px;
+  z-index: 1000;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 1;
+  transform: translateY(-150%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  visibility: hidden;
+}
+.has-submenu .submenu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0;
+  flex-basis: 40%;
+}
+.has-submenu .submenu ul li {
+  padding: 12px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+.has-submenu .submenu ul li:hover a {
+  color: #767976 !important;
+}
+.has-submenu .submenu a {
+  color: #1E1E1E !important;
+}
+.has-submenu:hover .submenu {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+.has-submenu .submenu {
+  transition-delay: 0.3s;
+}
+
+.menu_image {
+  flex-basis: 40%;
+  height: 192px;
+}
+.menu_image .image_div {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  border-radius: 6px;
+}

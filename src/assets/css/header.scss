@@ -1,0 +1,113 @@
+#header {
+    margin-top: 40px;
+    height: 56px;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+}
+.main_menu {
+    position: relative;
+    width: 100%;
+}
+.menu_wrapper {
+    background-color: #F6F6F6;
+    border-radius: 8px;
+    padding: 0 30px;
+    width: 100%;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        cursor: pointer;
+        li {
+            padding: 16px 0;
+            &:hover {
+                border-bottom: 2px solid #2E8C2C;
+                margin-bottom: -2px;
+                a {
+                    color: #767976;
+                }
+            }
+        }
+    }
+    
+}
+.header_rightside {
+    display: flex;
+    justify-items: start;
+    align-items: center;
+}
+
+.has-submenu {
+    .submenu {
+        display: flex;
+        position: absolute;
+        top: 105%;
+        left: 0;
+        width: 100%;
+        background-color: #F6F6F6;
+        border-radius: 8px;
+        padding: 8px 20px 16px;
+        z-index: 1000;
+        justify-content: space-between;
+        align-items: center;
+        opacity: 1;
+        transform: translateY(-150%);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        visibility: hidden;
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 0;
+            flex-basis: 40%;
+
+            li {
+                padding: 12px 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                cursor: pointer;
+
+                &:hover {
+                    a {
+                        color: #767976 !important;
+                    }
+                }
+            }
+        }
+
+        a {
+            color: #1E1E1E !important;
+        }
+    }
+
+    
+    &:hover {
+        .submenu {
+            opacity: 1; 
+            transform: translateY(0); 
+            visibility: visible;
+        }
+    }
+    .submenu {
+        transition-delay: 0.3s; 
+    }
+}
+
+.menu_image {
+    flex-basis: 40%;
+    height: 192px;
+    .image_div {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        border-radius: 6px;
+    }
+}
+

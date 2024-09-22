@@ -1,0 +1,282 @@
+/* Общие стили для секции */
+.slider-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 20px;
+}
+
+.slider-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.slider-menu {
+    width: 20%;
+    
+    padding: 20px;
+    color: #fff;
+    list-style: none;
+    text-align: left;
+}
+
+.slider-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.slider-menu li {
+    font-size: 24px;
+    color: #767976;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.slider-menu li.active {
+    color: #000;
+    transform: translateY(-5px);
+    font-weight: bold;
+}
+
+.slider-wrapper {
+    width: 55%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-content {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slider-slide {
+    min-width: 100%;
+    display: flex;
+}
+
+.image-wrapper {
+    width: 50%;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+}
+
+.text-wrapper {
+    width: 50%;
+    padding: 20px;
+    background-color: #f6f6f6;
+}
+
+.text-wrapper h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.text-wrapper ul {
+    list-style: none;
+    padding: 0;
+}
+
+.text-wrapper ul li {
+    font-size: 18px;
+    padding: 8px 0;
+}
+
+.slider-info {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info-block {
+    background-color: #f6f6f6;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.info-block h3 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.prev-slide,
+.next-slide {
+    background-color: #f6f6f6;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev-slide:hover,
+.next-slide:hover {
+    background-color: #ddd;
+}
+
+////////////
+
+.image_section {
+    img {
+        border-radius: 40px;
+    }
+}
+
+//////////
+
+.flex_section {
+    h2 {
+        margin-bottom: 32px;
+    }
+    p.text_20 {
+        max-width: 40%;
+        margin-bottom: 76px;
+    }
+}
+.flex_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.flex_item_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 540px;
+    flex-basis: 24.2%;
+    border-radius: 16px;
+    padding: 24px 20px;
+    transition: background-size .5s ease;
+    overflow: hidden;
+    background-position: center;
+}
+.flex_item_card:hover {
+    background-size: 150%;
+
+}
+.number {
+    color: #fff;
+    font-size: 64px;
+    line-height: 64px;
+    
+}
+.one {
+    background-image: url(../images/bg_1.png);
+    background-repeat: no-repeat;
+    background-size: 135%;
+}
+.two {
+    background-image: url(../images/bg_2.png);
+    background-repeat: no-repeat;
+    background-size: 135%;
+}
+.three {
+    background-image: url(../images/bg_3.png);
+    background-repeat: no-repeat;
+    background-size: 135%;
+}
+.four {
+    background-image: url(../images/bg_4.png);
+    background-repeat: no-repeat;
+    background-size: 135%;
+}
+
+//////
+
+.zerno_section {
+    background-image: url(../images/image_section_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 40px;
+    padding: 80px 0 288px 0;
+    .container {
+        h2 {
+            color: #fff;
+            max-width: 50%;
+        }
+    }
+}
+///////
+
+
+//////
+
+/* Общие стили для Swiper */
+.swiper {
+    width: 100%;
+    /* Полная ширина контейнера */
+    height: auto;
+    /* Высота будет адаптироваться под количество слайдов */
+}
+
+.swiper-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Вертикальная направленность */
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    /* Цвет текста */
+    background-color: #ddd;
+    /* Цвет фона для неактивных слайдов */
+    height: 80px !important;
+    /* Фиксированная высота для всех слайдов */
+    transition: width 0.3s ease, opacity 0.3s ease;
+    width: 70%;
+    /* Стандартная ширина для всех слайдов */
+    opacity: 0.5;
+    /* Полупрозрачность для всех слайдов */
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* Стили для активного слайда */
+.swiper-slide-active {
+    background-color: #4caf50;
+    /* Зеленый цвет для активного слайда */
+    width: 100%;
+    /* Активный слайд на всю ширину */
+    opacity: 1;
+    /* Полная непрозрачность */
+}
+
+/* Стили для соседних слайдов */
+.swiper-slide-next,
+.swiper-slide-prev {
+    width: 85% !important;
+    opacity: 0.7 !important;
+}
+
+.swiper-slide-next-next,
+.swiper-slide-prev-prev {
+    width: 75% !important;
+    opacity: 0.6;
+}
+
+.swiper-slide-next-next-next,
+.swiper-slide-prev-prev-prev {
+    width: 70% !important;
+    opacity: 0.5;
+}
