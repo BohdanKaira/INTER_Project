@@ -20,6 +20,7 @@
 
 <link rel="stylesheet" href="./assets/css/style.min.css">
     <link rel="stylesheet" href="./assets/css/ros.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
 <body>
     <div class="page-wrap">
@@ -360,39 +361,43 @@
                     </div>
                     <div class="partners_right postach">
                         <div class="partners_wrap">
-                            <div class="partner_logo">
-                                <img src="./assets/images/postach_1.png" alt="logo">
-                            </div>
-                            <div class="line"></div>
-                            <div class="partner_logo">
-                                <img src="./assets/images/postach_2.png" alt="logo">
-                            </div>
-                            <div class="line"></div>
-                            <div class="partner_logo">
-                                <img src="./assets/images/postach_3.png" alt="logo">
-                            </div>
-                            <div class="line"></div>
-                            <div class="partner_logo">
-                                <img src="./assets/images/postach_4.png" alt="logo">
-                            </div>
+                            <div class="part one">
+                                <div class="partner_logo">
+                                    <img src="./assets/images/postach_1.png" alt="logo">
+                                </div>
+                                <div class="partner_logo">
+                                    <img src="./assets/images/postach_2.png" alt="logo">
+                                </div>
+                            </div>  
+                            <div class="big_line_animal"></div>  
+                            <div class="part two">
+                                <div class="partner_logo">
+                                    <img src="./assets/images/postach_3.png" alt="logo">
+                                </div>
+                                <div class="partner_logo">
+                                    <img src="./assets/images/postach_4.png" alt="logo">
+                                </div>
+                            </div>    
                         </div>
                         <div class="big_line"></div>
                         <div class="partners_wrap">
-                            <div class="partner_logo">
-                                <img src="./assets/images/postach_5.png" alt="logo">
-                            </div>
-                            <div class="line"></div>
-                            <div class="partner_logo">
-                                <img src="./assets/images/postach_6.png" alt="logo">
-                            </div>
-                            <div class="line"></div>
-                            <div class="partner_logo">
-                                <img src="./assets/images/postach_7.png" alt="logo">
-                            </div>
-                            <div class="line"></div>
-                            <div class="partner_logo">
-                                <img src="./assets/images/postach_8.png" alt="logo">
-                            </div>
+                            <div class="part one">
+                                <div class="partner_logo">
+                                    <img src="./assets/images/postach_5.png" alt="logo">
+                                </div>
+                                <div class="partner_logo">
+                                    <img src="./assets/images/postach_6.png" alt="logo">
+                                </div>
+                            </div>  
+                            <div class="big_line_animal"></div>  
+                            <div class="part two">
+                                <div class="partner_logo">
+                                    <img src="./assets/images/postach_7.png" alt="logo">
+                                </div>
+                                <div class="partner_logo">
+                                    <img src="./assets/images/postach_8.png" alt="logo">
+                                </div>
+                            </div>    
                         </div>
                     </div>
                 </div>
@@ -402,13 +407,15 @@
                 <div class="container">
                     <h2>Технопарк</h2>
                     <div class="text_20 margin">Парк техніки СТОВ «ІНТЕР» наповнений агрегатами відомих світових брендів</div>
-                    <div class="filter_button_wrapper">
-                        <div id="tractors" class="filter_button text_20">Трактори</div>
-                        <div id="grain_harvesters" class="filter_button text_20">Зернозбиральний комбайни</div>
-                        <div id="forage_harvesters" class="filter_button text_20">Кормозбиральний комбайн</div>
-                        <div id="sprayers" class="filter_button text_20">Oбприскувачі</div>
-                        <div id="seeding_machines" class="filter_button text_20">Посівна техніка</div>
-                    </div>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div id="tractors" class="swiper-slide filter_button text_20 active_button">Трактори</div>
+                            <div id="grain_harvesters" class="swiper-slide filter_button text_20">Зернозбиральний комбайни</div>
+                            <div id="forage_harvesters" class="swiper-slide filter_button text_20">Кормозбиральний комбайн</div>
+                            <div id="sprayers" class="swiper-slide filter_button text_20">Oбприскувачі</div>
+                            <div id="seeding_machines" class="swiper-slide filter_button text_20">Посівна техніка</div>
+                        </div>
+                    </div>    
                     <div class="descr_card_wrapper">
                         <div id="descr_card" class="descr_card stat">
                             <ul>
@@ -755,5 +762,14 @@
     });
     </script>
     <!-- <script src="./assets/js/main.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        loop: false,
+        speed: 500,
+    });
+    </script>
 </body>
 </html>

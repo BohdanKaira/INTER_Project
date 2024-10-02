@@ -20,6 +20,7 @@
 
 <link rel="stylesheet" href="./assets/css/style.min.css">
     <link rel="stylesheet" href="./assets/css/blog.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
 <body>
     <div class="page-wrap">
@@ -284,16 +285,16 @@
                         <div class="current_page">Новини</div>
                     </div>
                     <h2>Новини</h2>
-                    <div class="catalog_filter">
-                        <nav>
-                            <button type="button" class="catalog_filter_button text_20" data-filter="all">Всі новини</button>
-                            <button type="button" class="catalog_filter_button text_20" data-filter=".current">Актуальне</button>
-                            <button type="button" class="catalog_filter_button text_20" data-filter=".development">Розвиток</button>
-                            <button type="button" class="catalog_filter_button text_20" data-filter=".expert">Думка експертів</button>
-                            <button type="button" class="catalog_filter_button text_20" data-filter=".agro">Для агровиробників</button>
-                            <button type="button" class="catalog_filter_button text_20" data-filter=".logistiс">Логістика</button>
-                            <button type="button" class="catalog_filter_button text_20" data-filter=".partners">Для партнерів</button>
-                        </nav>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <button type="button" class="swiper-slide catalog_filter_button text_20" data-filter="all">Всі новини</button>
+                            <button type="button" class="swiper-slide catalog_filter_button text_20" data-filter=".current">Актуальне</button>
+                            <button type="button" class="swiper-slide catalog_filter_button text_20" data-filter=".development">Розвиток</button>
+                            <button type="button" class="swiper-slide catalog_filter_button text_20" data-filter=".expert">Думка експертів</button>
+                            <button type="button" class="swiper-slide catalog_filter_button text_20" data-filter=".agro">Для агровиробників</button>
+                            <button type="button" class="swiper-slide catalog_filter_button text_20" data-filter=".logistiс">Логістика</button>
+                            <button type="button" class="swiper-slide catalog_filter_button text_20" data-filter=".partners">Для партнерів</button>
+                        </div>
                     </div>
                 
                     <div class="blog_grid_wrapper ">
@@ -633,6 +634,15 @@
      <script src="./assets/js/mixitup.min.js"></script>
     <script>
         var mixer = mixitup('.blog_grid_wrapper');
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        loop: false,
+        speed: 500,
+    });
     </script>
 </body>
 </html>
